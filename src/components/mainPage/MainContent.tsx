@@ -1,73 +1,63 @@
-import React from "react";
-import "../mainPage/mainPage.css";
-import "./utils/TabsLogic";
-import { TabOneContent } from "../tabsContent/tab-1-content/TabOneContent";
-import { TabTwoContent } from "../tabsContent/tab-2content/TabTwoContent";
+import React, { useState } from "react";
+import "./mainContent.css";
+import "../../utils/TabsLogic";
+import { FirstTabContent } from "../tabsContent/tab-1-content/FirstTabContent";
+import { SecondTabContent } from "../tabsContent/tab-2content/SecondTabContent";
+import { ThirdTabContent } from "../tabsContent/tab-3content/ThirdTabContent";
+import { tabs } from "../../tabs/tabs";
 
-export const MainPage = () => {
+export const MainContent = () => {
+  const [activeTab, setActiveTab] = useState<number>(1);
+  const [tabTitle, setTabTitle] = useState<string>("Контент таба 1");
+
+  const handleTabClick = (index: number) => {
+    setActiveTab(index);
+    switch (index) {
+      case 0: {
+        setTabTitle("Контент таба 1");
+        return;
+      }
+      case 1: {
+        setTabTitle("Контент таба 2");
+        return;
+      }
+      case 2: {
+        setTabTitle("Контент таба 3");
+        return;
+      }
+    }
+  };
+
   return (
     <>
       <section className={"container"}>
-        <div className={"tabs-wrapper"}>
-          <div className={"active"}>
-            <div className={"tab"}>
-              <div className={"tab-content"}>
-                <h1 className={"tab-title"}>Заголовок таба 1</h1>
-                <span className={"tab-text-wrapper"}>
-                  Равным образом, высококачественный прототип будущего проекта способствует
-                  повышению качества анализа существующих паттернов
-                </span>
-              </div>
-            </div>
+        <div className={"pageWrapper"}>
+          <div className={"tabs-wrapper"}>
+            {tabs.map((el) => {
+              return (
+                <div
+                  key={el.id}
+                  className={activeTab === el.id ? "active" : ""}
+                  onClick={() => handleTabClick(el.id)}
+                >
+                  <div className={"tab"}>
+                    <div className={"tab-content"}>
+                      <div className={"tab-title-wrapper"}>
+                        <h1 className={"tab-title"}>{el.title}</h1>
+                        <button className={`tab-btn ${activeTab === el.id ? "active" : ""}`} />
+                      </div>
+                      <span className={"tab-text-wrapper"}>{el.desc}</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <div className={"tab"}>
-            <div className={"tab-content"}>
-              <h1 className={"tab-title"}>Заголовок таба 2</h1>
-              <span className={"tab-text-wrapper"}>
-                Равным образом, высококачественный прототип будущего проекта способствует повышению
-                качества анализа существующих паттернов
-              </span>
-            </div>
-          </div>
-          <div className={"tab"}>
-            <div className={"tab-content"}>
-              <h1 className={"tab-title"}>Заголовок таба 3</h1>
-              <span className={"tab-text-wrapper"}>
-                Равным образом, высококачественный прототип будущего проекта способствует повышению
-                качества анализа существующих паттернов
-              </span>
-            </div>
-          </div>
+          {activeTab === 0 && <FirstTabContent tabTitle={tabTitle} />}
+          {activeTab === 1 && <SecondTabContent tabTitle={tabTitle} />}
+          {activeTab === 2 && <ThirdTabContent tabTitle={tabTitle} />}
         </div>
-        {/*<TabOneContent />*/}
-        <TabTwoContent />
       </section>
     </>
   );
 };
-// <div className="tabs-wrapper">
-//   <div className="tabs-container">
-//     <div className="tab-container">
-//       <div className="active">
-//         <i className="dosent work"></i> Заголовок таба 1
-//       </div>
-//     </div>
-//
-//     <div className="tab-container">
-//       <div>
-//         <i className="dosent work"></i> Заголовок таба 2
-//       </div>
-//     </div>
-//
-//     <div className="tab-container">
-//       <div>
-//         <i className="dosent work"></i> Заголовок таба 3
-//       </div>
-//     </div>
-//   </div>
-//
-//   {/*//Этo scroll*/}
-//   <div className="tab-indicator"></div>
-//
-//   <TabsContent />
-// </div>

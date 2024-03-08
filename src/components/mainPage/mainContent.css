@@ -1,100 +1,61 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');*/
-
-/*.tabs-wrapper {*/
-/*position:absolute;*/
-/*top:50%;*/
-/*left:50%;*/
-/*transform:translate(-50%,-50%);*/
-/*width:680px;*/
-/*height:360px;*/
-/*padding:30px 20px;*/
-/*background:#f5f5f5;*/
-/*box-shadow:5px 5px 10px 5px #ccc;*/
-/*overflow:hidden;*/
-
-/*    width: 100%;*/
-/*    height: 100vh;*/
-/*    padding: 30px 20px;*/
-/*    background: #FFFF;*/
-/*    box-shadow: 5px 5px 10px 5px #ccc;*/
-/*    overflow: hidden;*/
-/*    display:  flex;*/
-/*}*/
-
-/*.tabs-container {*/
-/*    display: flex;*/
-
-/*}*/
-
-/*.tabs-wrapper .tab-container {*/
-/*    float:left;*/
-/*    width:180px;*/
-/*    height:100%;*/
-/*    border-right:1px solid #ccc;*/
-/*    padding:50px 0px;*/
-/*}*/
-/*.tabs-wrapper .tab-container > div {*/
-/*    height:50px;*/
-/*    line-height:50px;*/
-/*    font-size:16px;*/
-/*    font-weight:600;*/
-/*    color:#888;*/
-/*    cursor:pointer;*/
-/*    padding-left:10px;*/
-/*}*/
-/*.tabs-wrapper .tab-container > div:hover,*/
-/*.tabs-wrapper .tab-container > div.active {*/
-/*    color:#00acee;*/
-/*}*/
-/*.tabs-wrapper .tab-container div i {*/
-/*    display:inline-block;*/
-/*    margin-left:10px;*/
-/*    margin-right:5px;*/
-/*}*/
-/*.tabs-wrapper .tab-content {*/
-/*    position:relative;*/
-/*    height:100%;*/
-/*    overflow:hidden;*/
-/*}*/
-/*.tabs-wrapper .tab-content > div > i {*/
-/*    display:inline-block;*/
-/*    width:50px;*/
-/*    height:50px;*/
-/*    background:#555;*/
-/*    color:#f5f5f5;*/
-/*    font-size:25px;*/
-/*    font-weight:600;*/
-/*    text-align:center;*/
-/*    line-height:50px;*/
-/*    border-radius:50%;*/
-/*}*/
-/*.tabs-wrapper .tab-content > div {*/
-/*    position:absolute;*/
-/*    text-align:center;*/
-/*    padding:40px 20px;*/
-/*    top:-200%;*/
-/*    transition:all 500ms ease-in-out;*/
-/*}*/
-/*.tabs-wrapper .tab-content > div.active {*/
-/*    top:0px;*/
-/*}*/
-
-/*.tabs-wrapper .tab-indicator {*/
-/*    position:absolute;*/
-/*    width:4px;*/
-/*    height:50px;*/
-/*    background:#00acee;*/
-/*    left:198px;*/
-/*    top:80px;*/
-/*    transition:all 500ms ease-in-out;*/
-/*}*/
-
 .container {
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.tab-title {
+    color: #2B3343;
+    font-size: 24px;
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 500;
+}
+
+.tab-btn {
+    width: 27px;
+    height: 27px;
+    top: 169px;
+    left: 336px;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    gap: 10px;
+    background: #0078EE;
+    cursor: pointer;
+    display: none;
+}
+
+.tab-btn:before {
+    content: url("../../assets/images/whiteArrow.svg");
+    display: inline-block;
+    width: 9px;
+    height: 13px;
+}
+
+.tab-btn.active:before {
+    content: url("../../assets/images/blueArrow.svg");
+}
+
+.tab-btn.active {
+    background: #FFFF;
+}
+
+.pageWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 45px;
-    height: 100vh;
+
 }
 
 .tabs-wrapper {
@@ -104,22 +65,17 @@
 }
 
 .tab {
-    width: 718px;
-    height: 140px;
+    /*//ТУТ ОШИБКА*/
+    /*width: 718px;*/
+    max-width: 718px;
+    max-height: 140px;
+    width: 100%;
     background-color: #F2F0F0;
-
 }
 
 .tab-content {
-    padding: 26px 138px 26px 20px;
-}
-
-.tab-title {
-    color: #2B3343;
-    font-size: 24px;
-    margin-bottom: 24px;
-    font-family: 'Cera Pro', sans-serif;
-    font-weight: 500;
+    cursor: pointer;
+    padding: 26px 20px;
 }
 
 .tab-text-wrapper {
@@ -130,15 +86,52 @@
     line-height: 20px;
 }
 
+.tab:hover {
+    background: #005fee;
+    color: #FFFFFF;
+}
+
+.tab:hover .tab-title {
+    color: #FFFFFF;
+}
+
 .active .tab,
 .active .tab .tab-title {
     background: #0078EE;
     color: #FFFFFF;
 }
-.active .tab:hover{
+
+.active .tab:hover {
     background: #005fee;
     cursor: pointer;
+}
+
+.active .tab:hover .tab-title {
+    background: #005fee;
+}
+
+@media (max-width: 1200px) {
+    .pageWrapper {
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        max-height: none;
+        height: auto;
+    }
+}
+@media (max-width: 992px) {
     .tab-title {
-        background: #005fee;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .tab-btn {
+        display: block;
+    }
+
+    .tab-text-wrapper {
+        font-size: 12px;
+        line-height: 14px;
     }
 }

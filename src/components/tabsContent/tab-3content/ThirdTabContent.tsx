@@ -1,24 +1,23 @@
 import React from "react";
-import "./SecondTabContent.css";
+import "./thirdTabContent.css";
 import { ActionBtn } from "../../action-button/ActionBtn";
 import { Form } from "../../form/Form";
 
-type SecondTabContentPropsType = {
+type TabThirdContentPropsType = {
   tabTitle: string;
 };
 
-export const SecondTabContent: React.FC<SecondTabContentPropsType> = (props) => {
+export const ThirdTabContent: React.FC<TabThirdContentPropsType> = (props) => {
   const { tabTitle } = props;
-
   const title = "Имя*";
 
   return (
     <>
-      <div className={"content-two-container"}>
-        <div className={"content-two-wrapper"}>
+      <div className={"content-three-container"}>
+        <div className={"content-three-wrapper"}>
           <div className={"main-content-wrapper"}>
-            <h2 className={"content-two-title"}>{tabTitle}</h2>
-            <div className={"content-two-form"}>
+            <h2 className={"content-three-title"}>{tabTitle}</h2>
+            <div className={"content-one-form"}>
               <Form title={title} />
             </div>
           </div>
