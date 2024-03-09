@@ -7,7 +7,7 @@ import { ThirdTabContent } from "../tabsContent/tab-3content/ThirdTabContent";
 import { tabs } from "../../tabs/tabs";
 
 export const MainContent = () => {
-  const [activeTab, setActiveTab] = useState<number>(1);
+  const [activeTab, setActiveTab] = useState<number>(0);
   const [tabTitle, setTabTitle] = useState<string>("Контент таба 1");
 
   const handleTabClick = (index: number) => {

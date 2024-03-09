@@ -9,21 +9,21 @@ export const Form: React.FC<FormPropsType> = (props) => {
   const { title } = props;
 
   return (
-    <form action={"#"}>
+    <form>
       <div className={"form-row"}>
         <div className="field">
           <input type="text" required />
-          <label htmlFor="">{title}</label>
+          <label>{title}</label>
         </div>
 
         <div className="field">
           <input type="text" required />
-          <label htmlFor="">{title}</label>
+          <label>{title}</label>
         </div>
 
         <div className="field">
           <input type="text" required />
-          <label htmlFor="">{title}</label>
+          <label>{title}</label>
         </div>
       </div>
     </form>
