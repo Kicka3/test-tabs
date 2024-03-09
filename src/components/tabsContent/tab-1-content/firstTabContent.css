@@ -35,26 +35,26 @@
 }
 
 .main-content-wrapper::-webkit-scrollbar {
-    width: 4px; /* ширина скроллбара */
+    width: 4px;
 }
 
 .main-content-wrapper::-webkit-scrollbar-track {
-    background-color: #ADB6BF ; /* цвет фона скроллбара */
+    background-color: #ADB6BF;
 }
 
 .main-content-wrapper::-webkit-scrollbar-thumb {
-    background-color: #0078EE; /* цвет ползунка скроллбара */
-    border-radius: 46px; /* радиус скругления ползунка */
+    background-color: #0078EE;
+    border-radius: 46px;
 }
 
 .main-content-wrapper::-webkit-scrollbar-thumb:hover {
-    background-color: #0038ee; /* цвет ползунка при наведении */
+    background-color: #0038ee;
 }
 
 @media (max-width: 992px) {
     .content-one-title {
-        font-size: 22px;
-        line-height: 24px;
+        font-size: 24px;
+        line-height: 27px;
     }
 
     .content-one-list {
@@ -70,13 +70,7 @@
     }
 
     .content-one-title {
-        font-size: 24px;
-        line-height: 30px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .content-one-container {
-        padding: 10px;
+        font-size: 22px;
+        line-height: 19px;
     }
 }

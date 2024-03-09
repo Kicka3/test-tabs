@@ -121,9 +121,9 @@
 }
 
 @media (max-width: 992px) {
-    /*.container {*/
-    /*    height: calc(100vh * 200px);*/
-    /*}*/
+    .container {
+        padding: 152px 30px 152px 30px
+    }
 
     .tabs-wrapper {
         gap: 10px;

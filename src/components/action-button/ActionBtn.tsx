@@ -9,10 +9,8 @@ export const ActionBtn: React.FC = () => {
   };
 
   return (
-    // <div className={"btn-wrapper"}>
     <button className={"action-btn"} onClick={ActionBtnHacndler}>
       {BtnName}
     </button>
-    // </div>
   );
 };
