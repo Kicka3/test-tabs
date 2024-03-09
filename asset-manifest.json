@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test-tabs/static/css/main.610404da.css",
-    "main.js": "/test-tabs/static/js/main.1c55f426.js",
+    "main.css": "/test-tabs/static/css/main.6a94ec82.css",
+    "main.js": "/test-tabs/static/js/main.67cda29e.js",
     "static/js/453.88b63a0a.chunk.js": "/test-tabs/static/js/453.88b63a0a.chunk.js",
     "static/media/Manrope-Regular.ttf": "/test-tabs/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
     "static/media/CeraPro-Regular.woff": "/test-tabs/static/media/CeraPro-Regular.c7da3a40565f40d48ea7.woff",
@@ -10,12 +10,12 @@
     "index.html": "/test-tabs/index.html",
     "static/media/blueArrow.svg": "/test-tabs/static/media/blueArrow.ba83f5207df1d154f28d.svg",
     "static/media/whiteArrow.svg": "/test-tabs/static/media/whiteArrow.7db2d4903f571592a155.svg",
-    "main.610404da.css.map": "/test-tabs/static/css/main.610404da.css.map",
-    "main.1c55f426.js.map": "/test-tabs/static/js/main.1c55f426.js.map",
+    "main.6a94ec82.css.map": "/test-tabs/static/css/main.6a94ec82.css.map",
+    "main.67cda29e.js.map": "/test-tabs/static/js/main.67cda29e.js.map",
     "453.88b63a0a.chunk.js.map": "/test-tabs/static/js/453.88b63a0a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.610404da.css",
-    "static/js/main.1c55f426.js"
+    "static/css/main.6a94ec82.css",
+    "static/js/main.67cda29e.js"
   ]
 }
