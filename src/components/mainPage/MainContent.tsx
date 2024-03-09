@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import "./mainContent.css";
 import "../../utils/TabsLogic";
 import { FirstTabContent } from "../tabsContent/tab-1-content/FirstTabContent";
