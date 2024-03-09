@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/test-tabs/static/css/main.5b0643c6.css",
+    "main.css": "/test-tabs/static/css/main.f6974a1c.css",
     "main.js": "/test-tabs/static/js/main.1c55f426.js",
     "static/js/453.88b63a0a.chunk.js": "/test-tabs/static/js/453.88b63a0a.chunk.js",
     "static/media/Manrope-Regular.ttf": "/test-tabs/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
@@ -10,12 +10,12 @@
     "index.html": "/test-tabs/index.html",
     "static/media/blueArrow.svg": "/test-tabs/static/media/blueArrow.ba83f5207df1d154f28d.svg",
     "static/media/whiteArrow.svg": "/test-tabs/static/media/whiteArrow.7db2d4903f571592a155.svg",
-    "main.5b0643c6.css.map": "/test-tabs/static/css/main.5b0643c6.css.map",
+    "main.f6974a1c.css.map": "/test-tabs/static/css/main.f6974a1c.css.map",
     "main.1c55f426.js.map": "/test-tabs/static/js/main.1c55f426.js.map",
     "453.88b63a0a.chunk.js.map": "/test-tabs/static/js/453.88b63a0a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b0643c6.css",
+    "static/css/main.f6974a1c.css",
     "static/js/main.1c55f426.js"
   ]
 }
