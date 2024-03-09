@@ -1,10 +1,19 @@
+/*.container {*/
+/*    height: 100vh;
+/*    padding: 30px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
 .container {
-    height: 100vh;
+    min-height: 100vh;
     padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .tab-title-wrapper {
     display: flex;
@@ -65,8 +74,6 @@
 }
 
 .tab {
-    /*//ТУТ ОШИБКА*/
-    /*width: 718px;*/
     max-width: 718px;
     max-height: 140px;
     width: 100%;
@@ -120,7 +127,20 @@
         height: auto;
     }
 }
+
 @media (max-width: 992px) {
+    /*.container {*/
+    /*    height: calc(100vh * 200px);*/
+    /*}*/
+
+    .tabs-wrapper {
+        gap: 10px;
+    }
+
+    .pageWrapper {
+        gap: 31px;
+    }
+
     .tab-title {
         font-size: 20px;
         line-height: 24px;
